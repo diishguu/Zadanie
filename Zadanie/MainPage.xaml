@@ -2,9 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
          x:Class="Zadanie.MainPage">
+    
+    
+    <VerticalStackLayout Margin="20, 50, 40, 40">
+        <Label Text="Notes"
+               HorizontalOptions="Center"
+               FontAttributes="Italic">
+        </Label>
+        
+        <Editor x:Name="editor"
+                Placeholder="Запишите свою заметку"
+                HeightRequest="150">
+        </Editor>
 
-
-
+        <Grid ColumnDefinitions="Auto, 30, Auto">
+            <Button Grid.Column="2"
+                    Text="Сохранить"
+                    WidthRequest="200"
+                    Clicked="OnSaveBurronClicked"/>
+            <Button Grid.Column="1"
+                    Text="Удалить"
+                    WidthRequest="200"
+                    Clicked="OnDeleteBurronClicked"/>
+        </Grid>
+    
+    </VerticalStackLayout>
 
 </ContentPage>
     

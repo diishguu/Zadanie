@@ -4,6 +4,22 @@ namespace Zadanie
 {
     public partial class MainPage : ContentPage
     {
+        string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");
+        public MainPage()
+        {
+            InitializeComponent();
+
+            if (File.Exists(_fileName))
+            {
+                editor.Text = File.ReadAllText(_fileName);
+            }
+
+        }
+
+
+    }
+}
+        /*
         Button loginButton;
         VerticalStackLayout layout;
 
@@ -32,9 +48,8 @@ namespace Zadanie
             Content = layout;
 
 
-        }
-    }
-}
+        }*/
+  
 
 
     /*
