@@ -5,6 +5,7 @@ namespace Zadanie
     public partial class MainPage : ContentPage
     {
         string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");
+        
         public MainPage()
         {
             InitializeComponent();
@@ -13,12 +14,20 @@ namespace Zadanie
             {
                 editor.Text = File.ReadAllText(_fileName);
             }
-
         }
 
 
     }
 }
+ 
+
+/*string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");*/
+/* if (File.Exists(_fileName))
+            {
+                editor.Text = File.ReadAllText(_fileName);
+            } */
+
+
         /*
         Button loginButton;
         VerticalStackLayout layout;
