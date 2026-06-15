@@ -1,11 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Zadanie.MainPage">
+         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         x:Class="Zadanie.MainPage">
 
+
+
+
+</ContentPage>
+    
+<!--Изменение2
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Label Text = "Enter a Phoneword"
+               FontSize ="20" />
+        <Entry x:Name = "PhoneNumberText"
+               Text = "1-555-NETMAUI"/>
+        <Button x:Name = "TranslateButton"
+                Text = "Translate"
+                Clicked = "OnTranslate"/>
+        <Button x:Name = "CallButton"
+                Text = "Call"
+                IsEnabled = "False"
+                Clicked = "OnCall"/>
+    </VerticalStackLayout>
+
+</ContentPage> -->
+    
+    <!--Изменение1
     <VerticalStackLayout>
         
-        <!--Изменение-->
+        Изменение
+    
         <Button Text="Вход"
                 SemanticProperties.Description="Вход в аккаунт"
                 SemanticProperties.Hint="Вход в ваш аккаунт при нажатии"
@@ -16,14 +40,14 @@
                 Background="#637e9c"
                 TextColor="white"/>
 
-        <!--Прохождение курса-->
+        Прохождение курса
+    
         <Button Text="Clicked"
                 x:Name="CounterBtn"
                 Clicked="OnCounterClicked">
             
         </Button>
     </VerticalStackLayout>
+-->
 
-</ContentPage>
-    
     
