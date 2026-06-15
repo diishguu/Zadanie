@@ -3,80 +3,32 @@
          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
          xmlns:notes="clr-namespace:Notes"
          x:Class="Zadanie.MainPage">
-    
-    
-    <VerticalStackLayout Margin="20, 50, 40, 40">
-        
-        <Label Text="Notes"
-               HorizontalOptions="Center"
-               FontAttributes="Italic"
-               TextColor="{x:Static Member=notes:SharedResources.FontColor}">
-        </Label>
-        
-        <Editor x:Name="editor"
-                Placeholder="Запишите свою заметку"
-                TextColor="{x:Static Member=notes:SharedResources.FontColor}"
-                HeightRequest="{OnPlatform 100, Android=500, iOS=500}" >
-        </Editor>
 
-        <Grid ColumnDefinitions="Auto, 30, Auto">
-            <Button Grid.Column="0"
-                    Text="Сохранить"
-                    WidthRequest="200" 
-                    TextColor="{x:Static Member=notes:SharedResources.FontColor}"
-                    BackgroundColor="{x:Static Member=notes:SharedResources.BackgroundColor}"
-                  />
-            <Button Grid.Column="2"
-                    Text="Удалить"
-                    WidthRequest="200"
-                    TextColor="{x:Static Member=notes:SharedResources.FontColor}"
-                    BackgroundColor="{x:Static Member=notes:SharedResources.BackgroundColor}"/>
-        </Grid>
-    
-    </VerticalStackLayout>
+    <VerticalStackLayout Padding="50" Spacing="15" >
+        
+        <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+            <Label Text="Tom" WidthRequest="120" VerticalOptions="Center" />
+            <Entry/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Margin="20" Spacing="15" VerticalOptions="Center">
+            <Label Text="Tim" WidthRequest="120"/>
+            <Label Text="Имя"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label Text="Tip pepe" WidthRequest="130"/>
+            <Label Text="Процент"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout Margin="25">
+            <Button Text="15%">
+        </Button>
+        <Button Text="20%"></Button>
+        </HorizontalStackLayout>
+
+</VerticalStackLayout>
 
 </ContentPage>
-    
-<!--Изменение2
-    <VerticalStackLayout Spacing="15" Padding="20">
-        <Label Text = "Enter a Phoneword"
-               FontSize ="20" />
-        <Entry x:Name = "PhoneNumberText"
-               Text = "1-555-NETMAUI"/>
-        <Button x:Name = "TranslateButton"
-                Text = "Translate"
-                Clicked = "OnTranslate"/>
-        <Button x:Name = "CallButton"
-                Text = "Call"
-                IsEnabled = "False"
-                Clicked = "OnCall"/>
-    </VerticalStackLayout>
-
-</ContentPage> -->
-    
-    <!--Изменение1
-    <VerticalStackLayout>
-        
-        Изменение
-    
-        <Button Text="Вход"
-                SemanticProperties.Description="Вход в аккаунт"
-                SemanticProperties.Hint="Вход в ваш аккаунт при нажатии"
-                HorizontalOptions="End"
-                Clicked="LogIn_Clicked"
-                VerticalOptions="Start"
-                Margin="20"
-                Background="#637e9c"
-                TextColor="white"/>
-
-        Прохождение курса
-    
-        <Button Text="Clicked"
-                x:Name="CounterBtn"
-                Clicked="OnCounterClicked">
-            
-        </Button>
-    </VerticalStackLayout>
--->
 
     
