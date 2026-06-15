@@ -4,31 +4,32 @@
          xmlns:notes="clr-namespace:Notes"
          x:Class="Zadanie.MainPage">
 
-    <VerticalStackLayout Padding="50" Spacing="15" >
-        
-        <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
-            <Label Text="Tom" WidthRequest="120" VerticalOptions="Center" />
-            <Entry/>
-        </HorizontalStackLayout>
+    <Grid RowDefinitions="Auto, Auto, Auto, *, Auto, Auto, Auto"
+          ColumnDefinitions="*, *"
+          Padding="40">
 
-        <HorizontalStackLayout Margin="20" Spacing="15" VerticalOptions="Center">
-            <Label Text="Tim" WidthRequest="120"/>
-            <Label Text="Имя"/>
-        </HorizontalStackLayout>
+        <Label Text="Bill" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+        <Entry Placeholder="Enter Amount" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
 
-        <HorizontalStackLayout>
-            <Label Text="Tip pepe" WidthRequest="130"/>
-            <Label Text="Процент"/>
-        </HorizontalStackLayout>
-        
-        <HorizontalStackLayout Margin="25">
-            <Button Text="15%">
-        </Button>
-        <Button Text="20%"></Button>
-        </HorizontalStackLayout>
+        <Label Text="Tip" Grid.Row="1" Grid.Column="0"/>
+        <Label  Text="0.00" Grid.Row="1" Grid.Column="1"/>
 
-</VerticalStackLayout>
+        <Label Text="Total" Grid.Row="2" Grid.Column="0"/>
+        <Label Text="0.00" Grid.Row="2" Grid.Column="1"/>
+
+        <Label Text="Tip Percentage" VerticalOptions="End" HorizontalOptions="Start" Grid.Row="3" Grid.Column="0"/>
+        <Label Text="15%" VerticalOptions="End" HorizontalOptions="End" Grid.Row="3" Grid.Column="1"/>
+        <Slider Minimum="0" Maximum="100" Value="15" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <Button Text="15%"  Margin="5" Grid.Row="5" Grid.Column="0"/>
+        <Button Text="20%"  Margin="5" Grid.Row="5" Grid.Column="1"/>
+
+        <Button  Margin="5" Text="Round Down" Grid.Row="6" Grid.Column="0"/>
+        <Button  Margin="5" Text="Round Up" Grid.Row="6" Grid.Column="1"/>
+
+    </Grid>
 
 </ContentPage>
 
     
+ 
