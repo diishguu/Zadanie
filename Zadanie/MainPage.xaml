@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadanie.MainPage">
+
+    <VerticalStackLayout>
+        
+        <!--Изменение-->
+        <Button Text="Вход"
+                SemanticProperties.Description="Вход в аккаунт"
+                SemanticProperties.Hint="Вход в ваш аккаунт при нажатии"
+                HorizontalOptions="End"
+                Clicked="LogIn_Clicked"
+                VerticalOptions="Start"
+                Margin="20"
+                Background="#637e9c"
+                TextColor="white"/>
+
+        <!--Прохождение курса-->
+        <Button Text="Clicked"
+                x:Name="CounterBtn"
+                Clicked="OnCounterClicked">
+            
+        </Button>
+    </VerticalStackLayout>
+
+</ContentPage>
+    
+    
