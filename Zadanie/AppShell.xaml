@@ -6,9 +6,4 @@
     xmlns:local="clr-namespace:Zadanie"
     Title="Zadanie">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
 </Shell>
