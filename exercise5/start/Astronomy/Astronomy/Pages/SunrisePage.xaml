@@ -26,18 +26,17 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="🌅" FontSize="72" Grid.Column="0" Background="LightPink"/>
-            <Label Text="☀️" FontSize="72" Grid.Column="1" Background="LightPink"/>
-            <Label Text="🌇" FontSize="72" Grid.Column="2" Background="LightPink" />
+            <Label Text="🌅" FontSize="72" Grid.Column="0" />
+            <Label Text="☀️" FontSize="72" Grid.Column="1" />
+            <Label Text="🌇" FontSize="72" Grid.Column="2" />
 
-            <Label Text="Восход" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" />
+            <Label Text="Рассвет" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" />
             <Label Text="День" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" />
             <Label Text="Закат" FontAttributes="Bold" Grid.Column="2" Grid.Row="1" />
 
             <Label x:Name="lblSunrise" WidthRequest="100" FontAttributes="None" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center" />
             <Label x:Name="lblDaylight" WidthRequest="150" FontAttributes="None" Grid.Column="1" Grid.Row="2" HorizontalTextAlignment="Center" />
             <Label x:Name="lblSunset" WidthRequest="100" FontAttributes="None" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center" />
-
         </Grid>
     </StackLayout>
 </ContentPage>

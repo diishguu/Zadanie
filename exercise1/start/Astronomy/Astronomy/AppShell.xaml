@@ -15,10 +15,11 @@
         </Tab>
     </TabBar>-->
     <FlyoutItem Title="Astronomy" Icon="moon.png">
-        <ShellContent Title="Moon Phase" Icon="moon.png"
-            ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
+        <ShellContent Title="Фазы луны" Icon="moon.png"
+            ContentTemplate="{DataTemplate local:MoonPhasePage}" 
+                      />
 
-        <ShellContent Title="Sunrise" Icon="sun.png"
+        <ShellContent Title="Фазы солнца" Icon="sun.png"
             ContentTemplate="{DataTemplate local:SunrisePage}"/>
     </FlyoutItem>
 
