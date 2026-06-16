@@ -3,35 +3,52 @@
          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
          xmlns:notes="clr-namespace:Notes"
          x:Class="Zadanie.MainPage">
-
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="bgColor">White</Color>
+            <Color x:Key="fgColor">Pink</Color>
+            <x:Double x:Key="fontSize">22</x:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <Grid Padding="10"
       ColumnDefinitions="*,2*"
-      RowDefinitions="Auto, Auto, Auto, *">
+      RowDefinitions="Auto, Auto, Auto, *"
+          x:Name ="LayoutRoot" BackgroundColor="{StaticResource bgColor}">
 
-        <Label Text="Bill"  FontSize="22" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
-        <Label Text="Tip"   FontSize="22" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" />
-        <Label Text="Total" FontSize="22" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" />
+        <Label Text="Bill"  FontSize="22" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" TextColor="{StaticResource fgColor}"/>
+        <Label x:Name="totalLabel" Text="Tip"   FontSize="22" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Margin="20" TextColor="{StaticResource fgColor}"/>
+        <Label Text="Total" FontSize="22" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Margin="20" TextColor="{StaticResource fgColor}"/>
 
-        <Entry Placeholder="Enter Amount" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" />
-        <Label Text="0.00" FontSize="22" Grid.Row="1" Grid.Column="1" />
-        <Label Text="0.00" FontSize="22" Grid.Row="2" Grid.Column="1" />
+        <Entry Placeholder="Enter Amount" Keyboard="Numeric" Grid.Row="0" Grid.Column="2" WidthRequest="200" HorizontalOptions="Start"/>
+        <Label Text="0.00" FontSize="22" Grid.Row="1" Grid.Column="1" Margin="20"/>
+        <Label Text="0.00" FontSize="22" Grid.Row="2" Grid.Column="1" Margin="20"/>
 
-        <Grid Grid.Row="3" Padding="10" ColumnSpacing="10" RowSpacing="10"
-          Grid.Column="0" 
+        <Grid Grid.Row="2" Padding="20" ColumnSpacing="10" RowSpacing="10"
+          Grid.Column="3" 
           Grid.ColumnSpan="2" VerticalOptions="End"
           ColumnDefinitions="*,*"
           RowDefinitions="Auto,Auto,Auto,Auto">
 
+            <Label Text="Tip Percentage" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" TextColor="{StaticResource fgColor}"/>
+            <Label x:Name="tipLabel" Text="15%" HorizontalOptions="End" VerticalTextAlignment="End" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="{StaticResource fgColor}"/>
+            <Slider Minimum="0" Maximum="100" Value="15" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                    MaximumTrackColor="LightBlue"
+                    MinimumTrackColor="Blue"
+                    ThumbColor="Blue"/>
 
-            <Label Text="Tip Percentage" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
-            <Label  Text="15%" HorizontalOptions="End" VerticalTextAlignment="End" FontSize="Medium" Grid.Row="0" Grid.Column="1" />
-            <Slider Minimum="0" Maximum="100" Value="15" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Button Text="15%" BorderColor="Blue" BorderWidth="2" Grid.Row="2" Grid.Column="0" BackgroundColor="LightBlue"/>
+            <Button Text="20%" BorderColor="Blue" BorderWidth="2" Grid.Row="2" Grid.Column="1" BackgroundColor="LightBlue"/>
 
-            <Button Text="15%" BorderColor="Pink" BorderWidth="2" Grid.Row="2" Grid.Column="0" />
-            <Button Text="20%" BorderColor="Pink" BorderWidth="2" Grid.Row="2" Grid.Column="1" />
+            <Button  Text="Round Down" BorderColor="Blue" BorderWidth="2" Grid.Row="3" Grid.Column="0" BackgroundColor="LightBlue"/>
+            <Button  Text="Round Up"   BorderColor="Blue" BorderWidth="2" Grid.Row="3" Grid.Column="1" BackgroundColor="LightBlue"/>
 
-            <Button  Text="Round Down" BorderColor="Pink" BorderWidth="2" Grid.Row="3" Grid.Column="0" />
-            <Button  Text="Round Up"   BorderColor="Pink" BorderWidth="2" Grid.Row="3" Grid.Column="1" />
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2">
+                <Button Clicked="OnLight" Text="Light" TextColor="White" Grid.Column="0" />
+                <Button Clicked="OnDark"  Text="Dark"  TextColor="White" Grid.Column="1" />
+            </HorizontalStackLayout>
+            
         </Grid>
     </Grid>
 
