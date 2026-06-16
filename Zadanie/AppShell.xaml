@@ -5,5 +5,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Zadanie"
     Title="Zadanie">
+    
+    <TabBar>
+        <Tab Title="Moon Phase">
 
+            <ShellContent ContentTemplate="{DataTemplate local:MoonPhasePage}" />
+        </Tab>
+        <Tab Title="Sunrise">
+
+            <ShellContent ContentTemplate="{DataTemplate local:SunrisePage}" />
+        </Tab>
+    </TabBar>
 </Shell>

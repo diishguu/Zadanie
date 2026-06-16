@@ -1,4 +1,6 @@
-﻿namespace Zadanie
+﻿
+
+namespace Zadanie
 {
     public partial class AppShell : Shell
     {
@@ -7,5 +9,6 @@
             InitializeComponent();
 
         }
+
     }
 }
